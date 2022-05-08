@@ -4,38 +4,121 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="resetcode.css" />
+    <link rel="stylesheet" href="resetcode.css" /><!--초기화 코드-->
+    <style>
+      body{
+        width: 100vw;
+      }
+      .left-bar{
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        width: 5%;
+        height: 100%;
+        background-color: #aaa;/*영역을 눈으로 확인하려고 해놓음*/
+      }
+      .left-btn{
+        flex-direction: column;
+      }
+      .basket-btn{
+        position: fixed;
+        z-index: 1;
+        margin-left: 5%;
+      }
+      .section{
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        position: fixed;
+      }
+      .map{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      .info-block{
+        width: 70%;
+        height: 100%;
+        margin-left: auto;
+      }
+      .put-in-btn{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        background-color: #aaa;/*영역을 눈으로 확인하려고 해놓음*/
+      }
+      .put-in-btn img{
+        width: 50px;
+        height: 50px;
+      }
+      .info{
+        height: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, minmax(100px, auto));
+        gap: 10px;
+        background-color: white;/*영역을 눈으로 확인하려고 해놓음*/
+      }
+      .img{
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .img img{
+        width: auto;
+        height: auto;
+      }
+      .name{
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .price{
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .teacher{
+        grid-column: 2;
+        grid-row: 2;
+      }
+      .others{
+        grid-column: 1;
+        grid-row: 3;
+      }
+      .scroll{
+
+      }
+    </style>
     <title>academy-info</title>
   </head>
   <body>
-    <header>
-      <div>
-        <h2>장바구니버튼</h2>
-      </div>
-    </header>
-    <section>
-      <article>
-        <div>
-          <h2>지도</h2>
-        </div>
-      </article>
-      <article>
-        <h2>집어넣기버튼</h2>
-        <div>
-          <div><h2>학원사진</h2></div>
-          <div><h2>학원이름</h2></div>
-          <div><h2>수강료</h2></div>
-          <div><h2>선생님소개</h2></div>
-          <div><h2>홍보자료</h2></div>
-          <h2>스크롤</h2>
-        </div>
-      </article>
-      <div>집어넣기버튼</div>
-    </section>
-    <aside>
-      <div>
+    <aside class="left-bar"><!--좌측바-->
+      <div class="left-btn">
         <h2>햄버거버튼</h2>
       </div>
-    </aside>
+    </aside><!--좌측바 끝-->
+    <div class="basket-btn"><h2>장바구니버튼</h2></div>
+    <section class="section">
+      <article><!--배경화면-->
+        <div>
+          <img class="map" src="img/map.PNG">
+        </div>
+      </article><!--배경화면 끝-->
+      <article class="info-block"><!--내용화면-->
+        <div class="put-in-btn">
+          <img src="./img/put-in.png">
+        <div class="info">
+          <div class="img"><img src="img/acaimg.jpg"></div>
+          <div class="name"><h1>(주)한국경영원</h1></div>
+          <div class="price"><h1>1,000,000원</h1></div>
+          <div class="teacher">
+            <div><h1>선생님소개</h1></div>
+            <div><h1>A선생님</h1></div>
+            <div><h1>B선생님</h1></div>
+          </div>
+          <div class="others"><h2>홍보자료</h2><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum non libero ab ut laboriosam! Eius magnam quis velit, ea dolorum, officia fuga consequatur, ducimus dolore odit voluptas cum. Vel, quo?</p></div>
+        </div>
+        <div class="scroll">스크롤</div>
+      </article><!--내용화면 끝-->
+    </section>
   </body>
 </html>
