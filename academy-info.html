@@ -19,14 +19,14 @@
       }
       .left-bar {
         display: flex;
-        width: 100px;
+        flex: 1;
         height: 100vh;
         background-color: #aaa; /*영역을 눈으로 확인하려고 해놓음*/
       }
       .ham-btn {
         width: 70px;
         height: 20px;
-        align-content: center;
+        margin: 0 auto;
       }
       .ham-btn div {
         height: 10px;
@@ -34,28 +34,20 @@
         margin: 10px 0;
       }
       .basket-btn {
-        position: fixed;
-        z-index: 1;
-        margin-left: 5%;
+        z-index: 2;
       }
       .section {
         display: flex;
-        width: 100%;
-        height: 100%;
+        flex: 8;
+        height: 100vh;
         margin-left: auto;
-        position: fixed;
       }
-      .background {
+      .map {
+        flex: 5;
         height: 100vh;
         background-image: url("img/map.PNG");
         background-repeat: no-repeat;
         background-size: cover;
-      }
-      .info-block {
-        flex: 1;
-        width: 70%;
-        height: 100%;
-        margin-left: auto;
       }
       .put-in-btn {
         display: flex;
@@ -144,8 +136,7 @@
     <title>academy-info</title>
   </head>
   <body>
-    <!--좌측바-->
-    <header class="header">
+    <section class="header">
       <nav class="left-bar">
         <div class="ham-btn">
           <div></div>
@@ -153,281 +144,48 @@
           <div></div>
         </div>
       </nav>
-    </header>
-    <!--좌측바 끝-->
-    <div class="basket-btn">
-      <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    <section class="background">
-      <!--배경화면-->
+      <div class="basket-btn">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
       <div class="map"></div>
       <section class="section">
-        <article class="info-block">
-          <!--내용화면-->
-          <div class="put-in-btn">
-            <img src="./img/put-in.png" />
-            <div class="add">
-              <img src="img/add.png" />
+        <div class="put-in-btn">
+          <img src="./img/put-in.png" />
+          <div class="add">
+            <img src="img/add.png" />
+          </div>
+          <div class="content">
+            <div class="img">
+              <img src="img/acaimg.jpg" />
             </div>
-            <div class="content">
-              <div class="img">
-                <img src="img/acaimg.jpg" />
+            <div class="info">
+              <div>
+                <h1>(주)한국경영원</h1>
               </div>
-              <div class="info">
-                <div>
-                  <h1>(주)한국경영원</h1>
-                </div>
-                <div>
-                  <h1>1,000,000원</h1>
-                </div>
+              <div>
+                <h1>1,000,000원</h1>
               </div>
-              <div class="teacher">
-                <div class="teacher-introduce">
-                  <h1>선생님소개</h1>
-                </div>
-                <div class="teacher-info">
-                  <img src="img/teacher.png" />
-                  <h1>A선생님</h1>
-                </div>
-                <div class="teacher-info">
-                  <img src="img/teacher.png" />
-                  <h1>B선생님</h1>
-                </div>
+            </div>
+            <div class="teacher">
+              <div class="teacher-introduce">
+                <h1>선생님소개</h1>
               </div>
-              <div class="others">
-                <h2>홍보자료</h2>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Illum non libero ab ut laboriosam! Eius magnam quis velit, ea
-                  dolorum, officia fuga consequatur, ducimus dolore odit
-                  voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet consectetur
-                  adipisicing elit. Illum non libero ab ut laboriosam! Eius
-                  magnam quis velit, ea dolorum, officia fuga consequatur,
-                  ducimus dolore odit voluptas cum. Vel, quo?Lorem, ipsum dolor
-                  sit amet consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-                  ad! In repellendus sunt qui tempore facere fuga voluptates
-                  quam. Incidunt autem magni, quasi modi deleniti ut ex esse
-                  molestias optio?Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Cupiditate fugit pariatur fugiat labore ea
-                  neque asperiores explicabo iure ipsa quo facilis, consequatur
-                  optio accusantium necessitatibus quisquam, harum voluptas non
-                  ab!LoremLorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Tempore, ad! In repellendus sunt qui tempore facere fuga
-                  voluptates quam. Incidunt autem magni, quasi modi deleniti ut
-                  ex esse molestias optio?Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Cupiditate fugit pariatur fugiat labore ea
-                  neque asperiores explicabo iure ipsa quo facilis, consequatur
-                  optio accusantium necessitatibus quisquam, harum voluptas non
-                  ab!LoremLorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo? Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Tempore, ad! In repellendus sunt qui tempore facere fuga
-                  voluptates quam. Incidunt autem magni, quasi modi deleniti ut
-                  ex esse molestias optio?Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Cupiditate fugit pariatur fugiat labore ea
-                  neque asperiores explicabo iure ipsa quo facilis, consequatur
-                  optio accusantium necessitatibus quisquam, harum voluptas non
-                  ab!LoremLorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Tempore, ad! In repellendus sunt qui tempore facere fuga
-                  voluptates quam. Incidunt autem magni, quasi modi deleniti ut
-                  ex esse molestias optio?Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Cupiditate fugit pariatur fugiat labore ea
-                  neque asperiores explicabo iure ipsa quo facilis, consequatur
-                  optio accusantium necessitatibus quisquam, harum voluptas non
-                  ab!LoremLorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo? Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Tempore, ad! In repellendus sunt qui tempore facere fuga
-                  voluptates quam. Incidunt autem magni, quasi modi deleniti ut
-                  ex esse molestias optio?Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Cupiditate fugit pariatur fugiat labore ea
-                  neque asperiores explicabo iure ipsa quo facilis, consequatur
-                  optio accusantium necessitatibus quisquam, harum voluptas non
-                  ab!LoremLorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem, ipsum dolor sit amet consectetur adipisicing
-                  elit. Illum non libero ab ut laboriosam! Eius magnam quis
-                  velit, ea dolorum, officia fuga consequatur, ducimus dolore
-                  odit voluptas cum. Vel, quo?Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Illum non libero ab ut
-                  laboriosam! Eius magnam quis velit, ea dolorum, officia fuga
-                  consequatur, ducimus dolore odit voluptas cum. Vel, quo?Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Illum non
-                  libero ab ut laboriosam! Eius magnam quis velit, ea dolorum,
-                  officia fuga consequatur, ducimus dolore odit voluptas cum.
-                  Vel, quo?Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Tempore, ad! In repellendus sunt qui tempore facere fuga
-                  voluptates quam. Incidunt autem magni, quasi modi deleniti ut
-                  ex esse molestias optio?Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Cupiditate fugit pariatur fugiat labore ea
-                  neque asperiores explicabo iure ipsa quo facilis, consequatur
-                  optio accusantium necessitatibus quisquam, harum voluptas non
-                  ab!Lorem
-                </p>
+              <div class="teacher-info">
+                <img src="img/teacher.png" />
+                <h1>A선생님</h1>
               </div>
+              <div class="teacher-info">
+                <img src="img/teacher.png" />
+                <h1>B선생님</h1>
+              </div>
+            </div>
+            <div class="others">
+              <h2>홍보자료</h2>
+              <p>Lorem</p>
             </div>
           </div>
-        </article>
-        <!--내용화면 끝-->
+        </div>
       </section>
     </section>
-    <!--배경화면 끝-->
   </body>
 </html>
