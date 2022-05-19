@@ -1,4 +1,4 @@
-# 내가 만든것
+# 내가 만든것(이민욱)
 
 ### main.html
 
@@ -14,4 +14,20 @@
 
 ### basket.js
 
-- aca_wrapper 관련내용
+- ````button.addEventListener("click", () => {
+    // 버튼 누르면 장바구니 display=none으로
+    basket_wrapper.classList.add("click");
+    button.style.display = "none";
+    aca_wrapper.classList.remove("click");
+  });```
+  ````
+- `aca_wrapper.classList.remove("click");` 부분
+
+- ````basket_wrapper.childNodes[1].addEventListener("click", () => {
+    // 장바구니 숨기기
+    basket_wrapper.classList.remove("click");
+    button.style.display = "flex";
+    aca_wrapper.classList.add("click");
+  });```
+  ````
+- `aca_wrapper.classList.add("click");` 부분
